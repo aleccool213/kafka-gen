@@ -1,0 +1,26 @@
+{
+  "metrics": {
+    "mock": true
+  },
+  "producerTopics": {
+    "testTopic": {
+      "name": "test"
+    }
+  },
+  "kafkaProducer": {
+    "metadata.broker.list": ["localhost:9092"]
+  },
+  "schemaRegistry": {
+    "host": "http://localhost:8081",
+    "headers": {
+      "Accept":
+        "application/vnd.schemaregistry.v1+json, application/vnd.schemaregistry+json, application/json"
+    },
+    "json": true
+  },
+  "kafkaPkgConfig": {
+    "batchSize": 100,
+    "readInterval": 100,
+    "numSchemaRetries": 10
+  }
+}

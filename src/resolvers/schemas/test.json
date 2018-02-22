@@ -1,0 +1,32 @@
+{
+  "namespace": "com.flipp.storefronts",
+  "name": "TaskCompleted",
+  "type": "record",
+  "doc": "This event records a processing event for storefronts tasks.",
+  "fields": [
+    {
+      "name": "flyer_run_id",
+      "type": "int",
+      "doc": "Flyer run id from project"
+    },
+    {
+      "name": "ref_id",
+      "type": "int",
+      "doc": "Ref id of resource. e.g. the page ID if ref_type is 'page'"
+    },
+    {
+      "name": "event_type",
+      "type": {
+        "type": "enum",
+        "name": "StorefrontsTypes",
+        "symbols": ["slice", "slice_qc", "wayfinding", "wayfinding_qc"]
+      },
+      "doc": "The task type"
+    },
+    {
+      "name": "timestamp",
+      "type": "string",
+      "doc": "Time event was sent. Format: YYYY-MM-DD HH:MM:SS -0500"
+    }
+  ]
+}
