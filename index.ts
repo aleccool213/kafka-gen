@@ -5,13 +5,13 @@ const bodyParser = require("body-parser");
 const { graphqlExpress, graphiqlExpress } = require("apollo-server-express");
 const { makeExecutableSchema } = require("graphql-tools");
 
-const { typeDefs } = require("./src/schema");
+const { typeDefs, customDefs } = require("./src/schema");
 const { resolvers } = require("./src/resolvers");
 
 // Put together a schema
 const schema = makeExecutableSchema({
-  typeDefs,
   resolvers,
+  typeDefs: customDefs.length > 0 ? customDefs : typeDefs,
 });
 
 // Initialize the app

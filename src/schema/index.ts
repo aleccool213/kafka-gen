@@ -6,14 +6,11 @@
 // 3. done!
 
 // The GraphQL schema in string form
-export const typeDefs = `
-  type Query { topics(name: String): [Topic] }
 
-  type Field { name: String, type: String, doc: String }
-  type Schema { fields: [Field] }
-  type Topic { name: String, schema: Schema }
+import { customDefs } from "./custom";
+import { typeDefs } from "./schemas";
 
-  type Mutation {
-    sendMessage(message: String): String
-  }
-`;
+export {
+  typeDefs,
+  customDefs,
+};

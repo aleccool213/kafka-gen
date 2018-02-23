@@ -1,6 +1,6 @@
-import { createProducer, ProducerAPI } from '@flipp/node-kafka';
+import { createProducer, ProducerAPI } from "@flipp/node-kafka";
 
-import { config } from '../../config';
+import { config } from "../../config";
 
 let producer: ProducerAPI;
 
@@ -10,11 +10,11 @@ let producer: ProducerAPI;
 const initProducer = async () => {
   producer = createProducer(
     config.producerTopics.testTopic.name,
-    require('../schemas/test.json'),
+    require("../schemas/test.json"),
     null,
     config.kafkaProducer,
     config.schemaRegistry,
-    config.kafkaPkgConfig
+    config.kafkaPkgConfig,
   );
   await producer.connect();
 };
@@ -34,6 +34,6 @@ export const terminateTestProducer = async () => {
   try {
     await producer.disconnect();
   } catch (err) {
-    console.log('producer terminated!');
+    console.log("producer terminated!");
   }
 };
