@@ -66,12 +66,18 @@ const generateNewCustomSchema = (input: boolean) => {
   return kafkaSchema.fields.reduce((acc, field) => {
     const customField = `
       "${field.doc}"
-      ${field.name}: ${generateType(field.type)} ${input && field.default ? "= " + field.default : '' }
+      ${field.name}: ${
+        generateType(field.type)
+      }${
+        !field.default ? "!" : ""
+      } ${
+        input && field.default ? "= " + field.default : ""
+      }
     `;
-  
+
     return acc + customField;
   }, "");
-}
+};
 
 const toWriteToFile = `
 export const customDefs = \`` +

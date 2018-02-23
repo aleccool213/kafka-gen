@@ -7,8 +7,7 @@ import { getTopics } from "./topics";
 export const resolvers = {
   Mutation: {
     async message(obj, args, context, info) {
-      console.log(args);
-      const result = await sendMessage(args.input);
+      const result = await sendMessage(args.input, info);
       return result;
     },
   },

@@ -43,7 +43,7 @@
     {
       "name": "message_id",
       "type": "string",
-      "default": ""
+      "default": "hi"
     }
   ]
 }

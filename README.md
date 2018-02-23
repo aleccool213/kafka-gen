@@ -25,12 +25,17 @@ A service which allows you to send kafka messages to a topic
 * ~~define schemas locally~~
   * ~~generate a custom graphql schema based on a kafka schema~~
   * support having multiple kafka schemas
+* setup.ts would write over topic array to development.json
 * hookup to local kafka server
   * ~~be able to send messages to a topic~~
-  * send fake data if you do not specify a certain field etc
+  * ~~support required fields and default fields~~
+* super simple ui
+  * basically just to control graphql api for people who dont want to use that
+
 * hookup to remote schema registry
   * build dynamic graphql schema based off the schema registry
 * be able to send messages to remote kafka server
+
 
 ## Api spec
 
