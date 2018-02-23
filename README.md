@@ -2,6 +2,12 @@
 
 A service which allows you to send kafka messages to a topic
 
+
+## ATTN:
+
+* Outside parties cannot run this service as it currently heavily leans on
+the @flipp/node-kafka npm package. It will soon become open-source.
+
 ## Objectives
 
 * Become more comfortable with building graphql-api applications
@@ -24,7 +30,7 @@ A service which allows you to send kafka messages to a topic
   * ~~test getting topics from local confluent instance~~
 * ~~define schemas locally~~
   * ~~generate a custom graphql schema based on a kafka schema~~
-  * generate custom graphql schemas based on multiple kafka schemas
+  * generate custom graphql schemas based on multiple kafka schemas 
   * ~~support having multiple kafka schemas~~
 * setup.ts would write over topic array from schema registry to src/config/app.json
 * hookup to local kafka server
