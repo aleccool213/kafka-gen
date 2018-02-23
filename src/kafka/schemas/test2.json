@@ -1,0 +1,49 @@
+{
+  "namespace": "com.flipp.kafkaNodeWorkshop.TestMessage",
+  "type": "record",
+  "name": "TestMessage",
+  "doc": "This event records when vendor assignments are completed or reassigned.",
+  "fields": [
+    {
+      "name": "merchant_id",
+      "type": "long",
+      "doc": "merchant id from FADMIN."
+    },
+    {
+      "name": "flyer_run_id",
+      "type": "long",
+      "doc": "flyer run id from FADMIN."
+    },
+    {
+      "name": "flyer_type_id",
+      "type": "long",
+      "doc": "Flyer type ID from FADMIN."
+    },
+    {
+      "name": "timestamp",
+      "type": "string",
+      "doc": "ISO 8601 datetime. Format: YYYY-MM-DD HH:MM:SS -0500"
+    },
+    {
+      "name": "vendor_id",
+      "type": "long",
+      "doc": "The ID of the vendor which worked on the task."
+    },
+    {
+      "name": "task_name",
+      "type": "string",
+      "doc": "The name of the task, e.g. box_draw, item_tag"
+    },
+    {
+      "name": "language",
+      "type": "string",
+      "doc": "2-character string representing language, e.g. 'en', 'fr'",
+      "default": "en"
+    },
+    {
+      "name": "message_id",
+      "type": "string",
+      "default": "hi"
+    }
+  ]
+}

@@ -2,11 +2,6 @@
   "metrics": {
     "mock": true
   },
-  "producerTopics": {
-    "testTopic": {
-      "name": "test"
-    }
-  },
   "kafkaProducer": {
     "metadata.broker.list": ["localhost:9092"]
   },

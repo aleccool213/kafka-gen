@@ -6,13 +6,13 @@ import { getTopics } from "./topics";
 // The resolvers
 export const resolvers = {
   Mutation: {
-    async message(obj, args, context, info) {
-      const result = await sendMessage(args.input, info);
+    async message(obj, args) {
+      const result = await sendMessage(args.input, args.topic);
       return result;
     },
   },
   Query: {
-    async topics(obj, args, context, info) {
+    async topics(obj, args) {
       const topics = await getTopics(args);
       return topics;
     },

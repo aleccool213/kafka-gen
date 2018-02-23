@@ -1,31 +1,19 @@
 import faker from "faker";
-import { produceMessage } from "../kafka/producers/test-producer";
-
-const generateFakeData = (args, info) => {
-  // generate fake data for required fields
-
-  return {
-
-  };
-};
+import { produceMessage } from "../kafka/producer";
 
 /**
  *
  * @param args keys - fields of a kafka message, values - values of this kafka message
  */
-const sendMessage = async (args: object, info) => {
-  // produce a message to the 'test' topic.
-  const message = {
-    ...args,
-    ...generateFakeData(args, info),
-  };
+const sendMessage = async (message, topic) => {
 
+  let result;
   try {
-    await produceMessage(message);
+    result = await produceMessage(message, topic);
   } catch (e) {
     return "failed!";
   }
-  return message;
+  return result;
 };
 
 export {

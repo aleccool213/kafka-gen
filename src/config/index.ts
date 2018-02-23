@@ -1,7 +1,7 @@
-import * as fs from 'fs';
+import * as fs from "fs";
 
-const env = process.env.ENVIRONMENT || 'development';
-const defaultConfig = require('./app.json');
+const env = process.env.ENVIRONMENT || "development";
+const defaultConfig = require("./app.json");
 const environmentConfig = require(`./${env}.json`);
 
 /**
@@ -19,7 +19,7 @@ const environmentConfig = require(`./${env}.json`);
 
 export let config: { [key: string]: any } = mergeConfigs(
   defaultConfig,
-  environmentConfig
+  environmentConfig,
 );
 
 if (fs.existsSync(`./config/${env}.local.json`)) {

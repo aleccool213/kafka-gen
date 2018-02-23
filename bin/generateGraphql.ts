@@ -4,14 +4,12 @@
  *
  * currently just supports kafka schemas in .json
  *
- * TODO: generate a seperate file which is held in .gitignore so users
- * dont commit it to their projects accidentally
+ * TODO: generate a schema which can support more than one kafka schema
  *
- * TODO: this is brittle af, make better
  */
 
-const fs = require("fs");
-const path = require("path");
+import * as fs from 'fs';
+import * as path from 'path';
 import { typeDefs } from "../src/schema/schemas";
 
 const firstArg = process.argv[2];
@@ -43,7 +41,7 @@ const kafkaSchema = require(`../${firstArg}`);
 
 const baseMutation = `
   type Mutation {
-    message(input: CustomField): CustomFieldOutput
+    message(input: CustomField!, topic: String): CustomFieldOutput
   }
 `;
 

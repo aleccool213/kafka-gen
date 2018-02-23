@@ -24,10 +24,12 @@ A service which allows you to send kafka messages to a topic
   * ~~test getting topics from local confluent instance~~
 * ~~define schemas locally~~
   * ~~generate a custom graphql schema based on a kafka schema~~
-  * support having multiple kafka schemas
-* setup.ts would write over topic array to development.json
+  * generate custom graphql schemas based on multiple kafka schemas
+  * ~~support having multiple kafka schemas~~
+* setup.ts would write over topic array from schema registry to src/config/app.json
 * hookup to local kafka server
   * ~~be able to send messages to a topic~~
+  * send a message to a specific topic registered with the app
   * ~~support required fields and default fields~~
 * super simple ui
   * basically just to control graphql api for people who dont want to use that
@@ -37,7 +39,4 @@ A service which allows you to send kafka messages to a topic
 * be able to send messages to remote kafka server
 
 
-## Api spec
-
-* list all topics
-  * /topics
+### Thanks go to [Flipp](https://corp.flipp.com/) for giving me company time to work on this
