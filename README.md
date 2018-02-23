@@ -18,6 +18,8 @@ the @flipp/node-kafka npm package. It will soon become open-source.
 
 ## Usage
 
+![Imgur](https://i.imgur.com/ofhPUxS.gif)
+
 1. Make sure your confluent instance is running (schema registry, etc)
 1. npm install
 1. add a kafka schema (json file format pls) to ./src/kafka/schemas
