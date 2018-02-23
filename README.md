@@ -12,6 +12,8 @@ A service which allows you to send kafka messages to a topic
 
 ## Usage
 
+![Imgur](https://i.imgur.com/ofhPUxS.gif)
+
 1. Make sure your confluent instance is running (schema registry, etc)
 1. npm install
 1. add a kafka schema (json file format pls) to ./src/kafka/schemas
