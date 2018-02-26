@@ -20,6 +20,10 @@ the @flipp/node-kafka npm package. It will soon become open-source.
 
 ![Imgur](https://i.imgur.com/ofhPUxS.gif)
 
+<to be filled>
+ 
+## Installation
+
 1. (to be deprecated) Setup access to `npm i` from our private [registry](https://confluence.wishabi.com/pages/viewpage.action?pageId=25738928#FlippLibraries(NodeModuleandRubyGems)-SetupArtifactoryforNPM)
 1. Make sure your confluent instance is running (schema registry, etc)
 1. npm install
