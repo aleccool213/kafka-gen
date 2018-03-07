@@ -41,7 +41,7 @@ const kafkaSchema = require(`../${firstArg}`);
 
 const baseMutation = `
   type Mutation {
-    message(input: CustomField!, topic: String): CustomFieldOutput
+    message(input: CustomField!, topic: String!): CustomFieldOutput
   }
 `;
 
