@@ -1,6 +1,6 @@
-# kafka-message-automator
+# kafka-gen
 
-A service which allows you to send kafka messages to a topic
+A service which allows you to send kafka messages to a topic through a GraphQL api. This is done through first generating a GraphQL schema file based on your existing Kafka schema files.
 
 
 ## ATTN:
@@ -20,10 +20,15 @@ the @flipp/node-kafka npm package. It will soon become open-source.
 
 ![Imgur](https://i.imgur.com/ofhPUxS.gif)
 
+<to be filled>
+ 
+## Installation
+
+1. (to be deprecated) Setup access to `npm i` from our private [registry](https://confluence.wishabi.com/pages/viewpage.action?pageId=25738928#FlippLibraries(NodeModuleandRubyGems)-SetupArtifactoryforNPM)
 1. Make sure your confluent instance is running (schema registry, etc)
 1. npm install
-1. add a kafka schema (json file format pls) to ./src/kafka/schemas
 1. get rid of namespace from your kafka schema file
+1. add a kafka schema (json file format pls) to ./src/kafka/schemas (support for multiple coming soon)
 1. run `ts-node bin/generateGraphql.ts ./src/kafka/schemas/<your file name>.json`
 1. change config/app.json contents to the topic you want to produce to, same name as your schema file
 1. `npm run dev:start`
