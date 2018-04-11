@@ -13,6 +13,7 @@ const sendMessage = async (message, topic) => {
   } catch (e) {
     return "failed!";
   }
+  console.log("produced a message!")
   return result;
 };
 

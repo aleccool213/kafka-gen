@@ -31,6 +31,7 @@ const connectedPromises = config.producerTopics.forEach((topicName) => {
  */
 export const produceMessage = async (message: object, topic: string) => {
   await connectedPromises;
+  console.log(message)
   producers[topic].produce(message);
   return message;
 };

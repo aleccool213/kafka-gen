@@ -1,5 +1,5 @@
 {
   "producerTopics": [
-    "test", "test2"
+    "flyer_pipeline_task_availability"
   ]
 }

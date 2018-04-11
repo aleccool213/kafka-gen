@@ -6,7 +6,7 @@ A service which allows you to send kafka messages to a topic
 ## ATTN:
 
 * Outside parties cannot run this service as it currently heavily leans on
-the @flipp/node-kafka npm package. It will soon become open-source.
+the @flipp/node-kafka npm package. It will soon become open-source. 
 
 ## Objectives
 
@@ -23,7 +23,9 @@ the @flipp/node-kafka npm package. It will soon become open-source.
 1. Make sure your confluent instance is running (schema registry, etc)
 1. npm install
 1. add a kafka schema (json file format pls) to ./src/kafka/schemas
+1. get rid of namespace from your kafka schema file
 1. run `ts-node bin/generateGraphql.ts ./src/kafka/schemas/<your file name>.json`
+1. change config/app.json contents to the topic you want to produce to, same name as your schema file
 1. `npm run dev:start`
 
 ## TODO
