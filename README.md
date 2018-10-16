@@ -2,6 +2,8 @@
 
 A service which allows you to send kafka messages to a topic through a GraphQL api. This is done through first generating a GraphQL schema file based on your existing Kafka schema files.
 
+This was an experiment for a hackathon to learn some new tech. Please do not use this :)
+
 
 ## ATTN:
 
